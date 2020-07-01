@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/30 22:48:20 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/01 00:25:39 by lmartin          ###   ########.fr       */
+/*   Created: 2020/07/01 01:52:01 by lmartin           #+#    #+#             */
+/*   Updated: 2020/07/01 03:15:45 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#ifndef PHONEBOOK_CLASS_HPP
+# define PHONEBOOK_CLASS_HPP
 
-int			command(std::string input)
+# include "Contact.class.hpp"
+
+class	PhoneBook
 {
-	if (!input.compare("ADD"))
-	{
-		std::cout << input << std::endl;
-	}
-	else if (!input.compare("SEARCH"))
-	{
-		std::cout << input << std::endl;
-	}
-	else if (!input.compare("EXIT"))
-		exit (EXIT_SUCCESS);
-	return (0);
-}
 
-int			main(void)
-{
-	std::string	input;
+private:
 
-	while (std::cin >> input)
-	{
-		command(input);
-	}
-	return (0);
-}
+	int		index;
+	Contact	contacts[8];
+
+public:
+
+	PhoneBook(void);
+	void	search(void);
+	void	incIndex(void);
+	void	addContact(void);
+	int		getIndex(void);
+
+};
+
+#endif

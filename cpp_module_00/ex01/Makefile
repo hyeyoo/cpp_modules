@@ -6,7 +6,7 @@
 #    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/30 21:31:46 by lmartin           #+#    #+#              #
-#    Updated: 2020/07/01 00:07:18 by lmartin          ###   ########.fr        #
+#    Updated: 2020/07/01 02:49:56 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #
@@ -67,7 +67,8 @@ DIR_OBJS	=	./compiled_srcs/
 
 # FILES #
 
-SRC			=	phonebook.cpp \
+SRC			=	input.cpp \
+				PhoneBook.class.cpp \
 				Contact.class.cpp
 
 SRCS		=	$(SRC)
