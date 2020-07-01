@@ -1,39 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/01 11:42:32 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/01 12:32:01 by lmartin          ###   ########.fr       */
+/*   Created: 2020/07/01 11:26:26 by lmartin           #+#    #+#             */
+/*   Updated: 2020/07/01 12:37:46 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstdlib>
-#include "ZombieEvent.hpp"
+#include "Zombie.hpp"
 
-ZombieEvent::ZombieEvent(void)
+Zombie::Zombie(void)
 {
-	this->type = "cool";
 	return ;
 }
 
-void		ZombieEvent::setZombieType(std::string type)
+Zombie::Zombie(std::string name, std::string type)
 {
+	this->name = name;
 	this->type = type;
 	return ;
 }
 
-Zombie		*ZombieEvent::newZombie(std::string name)
+void		Zombie::announce(void)
 {
-	return (new Zombie(name, this->type));
+	std::cout << "<" << this->name << " (" << this->type << ")>";
+	std::cout << " Braiiiiiiinnnssss..." << std::endl;
+	return ;
 }
 
-Zombie		*ZombieEvent::randomChump(void)
+void		Zombie::setName(std::string name)
 {
-	std::string	names[4] = {"Didier", "Georges", "Michel", "David"};
+	this->name = name;
+	return ;
+}
 
-	srand((unsigned) time(0));
-	return (new Zombie(names[std::rand() % 4], this->type));
+void		Zombie::setType(std::string type)
+{
+	this->type = type;
+	return ;
 }
