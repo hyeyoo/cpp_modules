@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/01 04:22:14 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/01 11:21:28 by lmartin          ###   ########.fr       */
+/*   Created: 2020/07/01 11:26:26 by lmartin           #+#    #+#             */
+/*   Updated: 2020/07/01 12:02:41 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Zombie.hpp"
 
-void			memoryLeak()
+Zombie::Zombie(std::string n, std::string t)
 {
-	std::string*		panthere = new std::string("String panthere");
-	std::cout << *panthere << std::endl;
-	delete(panthere);
+	this->name = n;
+	this->type = t;
+	return ;
 }
 
-int				main()
+void		Zombie::announce(void)
 {
-	memoryLeak();
-	while (1);
-	// do 'leaks a.out'
+	std::cout << "<" << this->name << " (" << this->type << ")>";
+	std::cout << " Braiiiiiiinnnssss..." << std::endl;
+	return ;
 }

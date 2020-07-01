@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 00:07:26 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/01 03:25:43 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/01 11:14:03 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,16 @@ void		Contact::smallPrint(void)
 
 void		Contact::print(void)
 {
-	std::cout << "first name : " << this->firstName << std::endl;
-	std::cout << "last name : " << this->lastName << std::endl;
-	std::cout << "nickname : " << this->nickname << std::endl;
-	std::cout << "login : " << this->login << std::endl;
-	std::cout << "postal address : " << this->postalAddress << std::endl;
-	std::cout << "phone number : " << this->phoneNumber << std::endl;
-	std::cout << "birthday date : " << this->birthdayDate << std::endl;
-	std::cout << "favorite meal : " << this->favoriteMeal << std::endl;
-	std::cout << "underwear color : " << this->underwearColor << std::endl;
-	std::cout << "darkest secret : " << this->darkestSecret << std::endl;
+	std::cout << "first name: " << this->firstName << std::endl;
+	std::cout << "last name: " << this->lastName << std::endl;
+	std::cout << "nickname: " << this->nickname << std::endl;
+	std::cout << "login: " << this->login << std::endl;
+	std::cout << "postal address: " << this->postalAddress << std::endl;
+	std::cout << "phone number: " << this->phoneNumber << std::endl;
+	std::cout << "birthday date: " << this->birthdayDate << std::endl;
+	std::cout << "favorite meal: " << this->favoriteMeal << std::endl;
+	std::cout << "underwear color: " << this->underwearColor << std::endl;
+	std::cout << "darkest secret: " << this->darkestSecret << std::endl;
 }
 
 void		Contact::setFirstName(std::string str)

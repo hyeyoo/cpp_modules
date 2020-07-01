@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.cpp                                           :+:      :+:    :+:   */
+/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/01 04:22:14 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/01 11:21:28 by lmartin          ###   ########.fr       */
+/*   Created: 2020/07/01 11:28:39 by lmartin           #+#    #+#             */
+/*   Updated: 2020/07/01 11:59:42 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef ZOMBIEEVENT_HPP
+# define ZOMBIEEVENT_HPP
 
-void			memoryLeak()
-{
-	std::string*		panthere = new std::string("String panthere");
-	std::cout << *panthere << std::endl;
-	delete(panthere);
-}
+# include <string>
+# include "Zombie.hpp"
 
-int				main()
+class ZombieEvent
 {
-	memoryLeak();
-	while (1);
-	// do 'leaks a.out'
-}
+
+private:
+	std::string	type;	
+
+public:
+	ZombieEvent(void);
+	void		setZombieType(std::string t);
+	Zombie		*newZombie(std::string name);
+	Zombie		*randomChump(void);
+
+};
+
+#endif

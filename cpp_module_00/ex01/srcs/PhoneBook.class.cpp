@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 01:56:55 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/01 03:40:28 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/01 11:15:32 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ void		PhoneBook::search(void)
 	std::cin >> i;
 	if (i < this->index)
 	{
-		std::cout << "============== " << i << " ==============" << std::endl;
+		std::cout << "index: " << i << std::endl;
 		this->contacts[i].print();
 	}
 	else
-		std::cout << "Wrong Index: Abort" << std::endl;
+		std::cout << "This index does not match with any contact" << std::endl;
 	return ;
 }
 
@@ -58,7 +58,7 @@ void		PhoneBook::addContact(void)
 
 	if (this->index == 8)
 	{
-		std::cout << "PhoneBook FULL : Abort" << std::endl;
+		std::cout << "PhoneBook FULL" << std::endl;
 		return ;
 	}
 	contact = &this->contacts[this->index];

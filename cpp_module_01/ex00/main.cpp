@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 04:04:13 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/01 04:09:51 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/01 11:20:15 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void		PonyOnTheHeap(void)
 	p->jump();
 	p->jump();
 	p->walk();
+	delete(p);
 	std::cout << "Ending PonyOnTheHeap()" << std::endl;
 }
 
@@ -42,6 +43,10 @@ void		PonyOnTheStack(void)
 
 int			main(void)
 {
+	std::cout << "Call PonyOnTheStack()" << std::endl;
 	PonyOnTheStack();
-	PonyOnTheHeap();	
+	std::cout << "Out PonyOnTheStack()" << std::endl;
+	std::cout << "Call PonyOnTheHeap()" << std::endl;
+	PonyOnTheHeap();
+	std::cout << "Out PonyOnTheHeap()" << std::endl;
 }

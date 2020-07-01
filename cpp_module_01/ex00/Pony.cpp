@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 03:54:42 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/01 04:06:58 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/01 11:17:21 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 Pony::Pony(void)
 {
-	std::cout << "Hihihi i'm a new poney" << std::endl;
+	std::cout << "new Pony" << std::endl;
 	this->color = "White";
 	return ;
 }
 
 Pony::~Pony(void)
 {
-	std::cout << "Bye bye poney" << std::endl;
+	std::cout << "deleting Pony" << std::endl;
 	return ;
 }
 
 void		Pony::walk(void)
 {
-	std::cout << "The poney get up on his 2 feet and walk..?" << std::endl;
+	std::cout << "walk" << std::endl;
 	return ;
 }
 
 void		Pony::jump(void)
 {
-	std::cout << "THE PONY IS JUMPING SO HIGH WTF" << std::endl;
+	std::cout << "jump" << std::endl;
 	return ;
 }
 
