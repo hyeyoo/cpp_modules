@@ -6,12 +6,14 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 04:42:58 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/02 07:59:35 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/02 09:42:57 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_CLASS_HPP
 # define FIXED_CLASS_HPP
+
+# include <iostream>
 
 class Fixed
 {
@@ -27,7 +29,8 @@ public:
 	Fixed(const int nb);
 	Fixed(const float nb);
 	Fixed				&operator=(const Fixed &fixed);
-	Fixed				&operator<<(const Fixed &fixed);
+	std::ostream		&operator<<(std::ostream &os,
+const Fixed &fixed);
 	float				toFloat(void) const;
 	int					toInt(void) const;
 	void				setRawBits(int const raw);
