@@ -6,40 +6,52 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 04:50:29 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/02 04:55:37 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/02 07:50:19 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cmath>
+#include <iostream>
 #include "Fixed.class.hpp"
 
 Fixed::Fixed(void)
 {
+	std::cout << "Default constructor called" << std::endl;
+	this->fixedPointValue = 0;
 	return ;
 }
 
 Fixed::~Fixed(void)
 {
+	std::cout << "Destructor called" << std::endl;
 	return ;
 }
 
-Fixed::Fixed(const Fiexed &fixed)
+Fixed::Fixed(const Fixed &fixed)
 {
+	std::cout << "Copy constructor called"  << std::endl;
+	*this = fixed;
 	return ;
 }
 
 Fixed	&Fixed::operator=(const Fixed &fixed)
 {
+	std::cout << "Assignation operator called"  << std::endl;
+	this->fixedPointValue = fixed.getRawBits();
 	return (*this);
 }
 
 
-void	setRawBits(int const raw)
+void	Fixed::setRawBits(int const raw)
 {
+	std::cout << "setRawBits member function called"  << std::endl;
+	this->fixedPointValue = raw;	
 	return ;
 }
 
-int		getRawBits(void)
+int		Fixed::getRawBits(void) const
 {
-	return ;
+	std::cout << "getRawBits member function called"  << std::endl;
+	return (this->fixedPointValue);
 }
 

@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.class.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/02 04:42:58 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/02 07:01:39 by lmartin          ###   ########.fr       */
+/*   Created: 2020/07/02 07:51:58 by lmartin           #+#    #+#             */
+/*   Updated: 2020/07/02 07:52:03 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_CLASS_HPP
-# define FIXED_CLASS_HPP
+#include <iostream>
+#include "Fixed.class.hpp"
 
-class Fixed
+int			main(void)
 {
-
-private:
-	int					fixedPointValue;
-	static const int	fracBits = 8;
-
-public:
-	Fixed(void);
-	~Fixed(void);
-	Fixed(const Fixed &fixed);
-	Fixed				&operator=(const Fixed &fixed);
-	void				setRawBits(int const raw);
-	int					getRawBits(void) const;
-
-};
-
-#endif
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
+	
+	c = b;
+	
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+	return (0);
+}
