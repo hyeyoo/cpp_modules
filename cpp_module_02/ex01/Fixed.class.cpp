@@ -6,10 +6,11 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 04:50:29 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/02 08:41:20 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/02 08:43:15 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cmath>
 #include <iostream>
 #include "Fixed.class.hpp"
 
@@ -33,6 +34,20 @@ Fixed::Fixed(const Fixed &fixed)
 	return ;
 }
 
+Fixed::Fixed(const int nb)
+{
+	std::cout << "Int constructor called" << std::endl;
+	this->fixedPointValue = nb << this->fracBits;
+	return ;
+}
+
+Fixed::Fixed(const float nb)
+{
+	std::cout << "Float constructor called" << std::endl;
+	this->fixedPointValue = nb * (1 << this->fracBits);
+	return ;
+}
+
 Fixed	&Fixed::operator=(const Fixed &fixed)
 {
 	std::cout << "Assignation operator called" << std::endl;
@@ -40,6 +55,20 @@ Fixed	&Fixed::operator=(const Fixed &fixed)
 	return (*this);
 }
 
+Fixed	&Fixed::operator<<(const Fixed &fixed)
+{
+	return (*this);
+}
+
+float	Fixed::toFloat(void) const
+{
+	return (this->fixedPointValue / (1 << this->fracBits));
+}
+
+int		Fixed::toInt(void) const
+{
+	return (this->fixedPointValue >> this->fracBits);
+}
 
 void	Fixed::setRawBits(int const raw)
 {
