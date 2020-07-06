@@ -6,15 +6,18 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 23:53:13 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 00:28:50 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 00:48:26 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 int		main(void)
 {
 	FragTrap	*frgtrp;
+	ScavTrap	*scvtrp;
 
 	srand((unsigned) time(0));
 	frgtrp = new FragTrap("Bob");
@@ -30,5 +33,16 @@ int		main(void)
 	frgtrp->vaulthunter_dot_exe("Joe");
 	frgtrp->vaulthunter_dot_exe("Joe");
 	delete(frgtrp);
+	scvtrp = new ScavTrap("Raoul");
+	scvtrp->rangedAttack("Fred");	
+	scvtrp->meleeAttack("Fred");	
+	scvtrp->takeDamage(30);
+	scvtrp->takeDamage(2);
+	scvtrp->takeDamage(200);
+	scvtrp->beRepaired(120);
+	scvtrp->challengeNewcomer();
+	scvtrp->challengeNewcomer();
+	scvtrp->challengeNewcomer();
+	delete(scvtrp);
 	return (0);
 }

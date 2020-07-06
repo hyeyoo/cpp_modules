@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 22:41:03 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 00:28:59 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 00:14:38 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,4 +171,9 @@ void	FragTrap::vaulthunter_dot_exe(std::string const &target)
 		this->energyPoints -= 25;
 	}
 	return ;
+}
+
+int		FragTrap::getHitPoints(void)
+{
+	return (this->hitPoints);
 }

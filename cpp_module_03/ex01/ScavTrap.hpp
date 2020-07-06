@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 22:41:01 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 00:28:39 by lmartin          ###   ########.fr       */
+/*   Created: 2020/07/07 00:25:22 by lmartin           #+#    #+#             */
+/*   Updated: 2020/07/07 00:38:22 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 #include <string>
 
-class FragTrap
+class ScavTrap
 {
-
+		
 private:
 	int				hitPoints;
 	int				maxHitPoints;
@@ -29,17 +29,18 @@ private:
 	int				rangedAttackDamage;
 	int				armorDamageReduction;
 
+
 public:
-	FragTrap(void);
-	FragTrap(std::string name);
-	~FragTrap(void);
-	FragTrap(const FragTrap &fragTrap);
-	FragTrap		&operator=(const FragTrap &fragTrap);
+	ScavTrap(void);
+	ScavTrap(std::string name);
+	~ScavTrap(void);
+	ScavTrap(const ScavTrap &scavTrap);
+	ScavTrap		&operator=(const ScavTrap &scavTrap);
 	void			rangedAttack(std::string const &target);
 	void			meleeAttack(std::string const &target);
 	void			takeDamage(unsigned int amount);
 	void			beRepaired(unsigned int amount);
-	void			vaulthunter_dot_exe(std::string const &target);
+	void			challengeNewcomer(void);
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 22:41:01 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 00:28:39 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 00:03:32 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ public:
 	void			takeDamage(unsigned int amount);
 	void			beRepaired(unsigned int amount);
 	void			vaulthunter_dot_exe(std::string const &target);
+	int				getHitPoints(void);
 
 };
 
