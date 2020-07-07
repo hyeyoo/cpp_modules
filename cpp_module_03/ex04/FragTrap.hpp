@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NinjaTrap.hpp                                      :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/07 02:14:02 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 22:42:25 by lmartin          ###   ########.fr       */
+/*   Created: 2020/07/06 22:41:01 by lmartin           #+#    #+#             */
+/*   Updated: 2020/07/07 22:54:28 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NINJATRAP_HPP
-# define NINJATRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # include <string>
 # include "ClapTrap.hpp"
-# include "FragTrap.hpp"
-# include "ScavTrap.hpp"
 
-class NinjaTrap: public ClapTrap
+class FragTrap: public virtual ClapTrap
 {
 
 private:
 
 
 public:
-	NinjaTrap(void);
-	NinjaTrap(std::string name);
-	~NinjaTrap(void);
-	NinjaTrap(const NinjaTrap &ninjaTrap);
-	NinjaTrap		&operator=(const NinjaTrap &ninjaTrap);
+	FragTrap(void);
+	FragTrap(std::string name);
+	~FragTrap(void);
+	FragTrap(const FragTrap &fragTrap);
+	FragTrap		&operator=(const FragTrap &fragTrap);
+	void			vaulthunter_dot_exe(std::string const &target);
 	void			rangedAttack(std::string const &target);
 	void			meleeAttack(std::string const &target);
-	void			ninjaShoebox(ClapTrap &trap);
-	void			ninjaShoebox(NinjaTrap &trap);
-	void			ninjaShoebox(FragTrap &trap);
-	void			ninjaShoebox(ScavTrap &trap);
 
 };
 

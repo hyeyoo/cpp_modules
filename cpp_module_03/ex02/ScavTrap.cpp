@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 00:25:27 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 02:04:54 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 22:36:41 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,32 @@ ScavTrap		&ScavTrap::operator=(const ScavTrap &scavTrap)
 	this->rangedAttackDamage = scavTrap.rangedAttackDamage;
 	this->armorDamageReduction = scavTrap.armorDamageReduction;
 	return (*this);
+}
+
+void	ScavTrap::rangedAttack(std::string const &target)
+{
+	std::cout << "SC4V-TP ";
+	std::cout << this->name;
+	std::cout << " attacks ";
+	std::cout << target;
+	std::cout << " at range, causing ";
+	std::cout << this->rangedAttackDamage;
+	std::cout << " points of damage!";
+	std::cout << std::endl;
+	return ;
+}
+
+void	ScavTrap::meleeAttack(std::string const &target)
+{	
+	std::cout << "SC4V-TP ";
+	std::cout << this->name;
+	std::cout << " attacks ";
+	std::cout << target;
+	std::cout << " in melee, causing ";
+	std::cout << this->meleeAttackDamage;
+	std::cout << " points of damage!";
+	std::cout << std::endl;
+	return ;
 }
 
 void			ScavTrap::challengeNewcomer(void)

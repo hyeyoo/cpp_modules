@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NinjaTrap.hpp                                      :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/07 02:14:02 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 22:42:25 by lmartin          ###   ########.fr       */
+/*   Created: 2020/07/07 00:25:22 by lmartin           #+#    #+#             */
+/*   Updated: 2020/07/07 22:54:44 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NINJATRAP_HPP
-# define NINJATRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 # include <string>
 # include "ClapTrap.hpp"
-# include "FragTrap.hpp"
-# include "ScavTrap.hpp"
 
-class NinjaTrap: public ClapTrap
+class ScavTrap: public virtual ClapTrap
 {
-
+		
 private:
 
 
 public:
-	NinjaTrap(void);
-	NinjaTrap(std::string name);
-	~NinjaTrap(void);
-	NinjaTrap(const NinjaTrap &ninjaTrap);
-	NinjaTrap		&operator=(const NinjaTrap &ninjaTrap);
+	ScavTrap(void);
+	ScavTrap(std::string name);
+	~ScavTrap(void);
+	ScavTrap(const ScavTrap &scavTrap);
+	ScavTrap		&operator=(const ScavTrap &scavTrap);
 	void			rangedAttack(std::string const &target);
 	void			meleeAttack(std::string const &target);
-	void			ninjaShoebox(ClapTrap &trap);
-	void			ninjaShoebox(NinjaTrap &trap);
-	void			ninjaShoebox(FragTrap &trap);
-	void			ninjaShoebox(ScavTrap &trap);
+	void			challengeNewcomer(void);
 
 };
 

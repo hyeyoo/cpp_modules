@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 00:25:22 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 02:01:14 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 22:35:10 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ public:
 	~ScavTrap(void);
 	ScavTrap(const ScavTrap &scavTrap);
 	ScavTrap		&operator=(const ScavTrap &scavTrap);
+	void			rangedAttack(std::string const &target);
+	void			meleeAttack(std::string const &target);
 	void			challengeNewcomer(void);
 
 };

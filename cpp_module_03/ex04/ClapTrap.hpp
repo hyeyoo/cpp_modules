@@ -1,41 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NinjaTrap.hpp                                      :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/07 02:14:02 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 22:42:25 by lmartin          ###   ########.fr       */
+/*   Created: 2020/07/07 00:58:13 by lmartin           #+#    #+#             */
+/*   Updated: 2020/07/07 21:53:11 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NINJATRAP_HPP
-# define NINJATRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # include <string>
-# include "ClapTrap.hpp"
-# include "FragTrap.hpp"
-# include "ScavTrap.hpp"
 
-class NinjaTrap: public ClapTrap
+class ClapTrap
 {
 
-private:
-
+protected:
+	int				hitPoints;
+	int				maxHitPoints;
+	int				energyPoints;
+	int				maxEnergyPoints;
+	int				level;
+	std::string		name;
+	int				meleeAttackDamage;
+	int				rangedAttackDamage;
+	int				armorDamageReduction;
 
 public:
-	NinjaTrap(void);
-	NinjaTrap(std::string name);
-	~NinjaTrap(void);
-	NinjaTrap(const NinjaTrap &ninjaTrap);
-	NinjaTrap		&operator=(const NinjaTrap &ninjaTrap);
+	ClapTrap(void);
+	ClapTrap(std::string name);
+	~ClapTrap(void);
+	ClapTrap(const ClapTrap &clapTrap);
+	ClapTrap		&operator=(const ClapTrap &clapTrap);
 	void			rangedAttack(std::string const &target);
 	void			meleeAttack(std::string const &target);
-	void			ninjaShoebox(ClapTrap &trap);
-	void			ninjaShoebox(NinjaTrap &trap);
-	void			ninjaShoebox(FragTrap &trap);
-	void			ninjaShoebox(ScavTrap &trap);
+	void			takeDamage(unsigned int amount);
+	void			beRepaired(unsigned int amount);
+	std::string		getName(void);
 
 };
 

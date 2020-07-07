@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 02:14:02 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 22:42:25 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 22:57:29 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "FragTrap.hpp"
 # include "ScavTrap.hpp"
 
-class NinjaTrap: public ClapTrap
+class NinjaTrap: public virtual ClapTrap
 {
 
 private:

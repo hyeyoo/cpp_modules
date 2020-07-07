@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 22:41:03 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 02:04:49 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 22:35:52 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,33 @@ FragTrap		&FragTrap::operator=(const FragTrap &fragTrap)
 	this->armorDamageReduction = fragTrap.armorDamageReduction;
 	return (*this);
 }
-	
+
+void	FragTrap::rangedAttack(std::string const &target)
+{
+	std::cout << "FR4G-TP ";
+	std::cout << this->name;
+	std::cout << " attacks ";
+	std::cout << target;
+	std::cout << " at range, causing ";
+	std::cout << this->rangedAttackDamage;
+	std::cout << " points of damage!";
+	std::cout << std::endl;
+	return ;
+}
+
+void	FragTrap::meleeAttack(std::string const &target)
+{	
+	std::cout << "FR4G-TP ";
+	std::cout << this->name;
+	std::cout << " attacks ";
+	std::cout << target;
+	std::cout << " in melee, causing ";
+	std::cout << this->meleeAttackDamage;
+	std::cout << " points of damage!";
+	std::cout << std::endl;
+	return ;
+}
+
 void	FragTrap::vaulthunter_dot_exe(std::string const &target)
 {
 	int				nb;
