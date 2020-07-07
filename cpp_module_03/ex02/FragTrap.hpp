@@ -6,28 +6,21 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 22:41:01 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 01:04:47 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 01:57:29 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
-#include <string>
+# include <string>
+# include "ClapTrap.hpp"
 
-class FragTrap
+class FragTrap: public ClapTrap
 {
 
 private:
-	int				hitPoints;
-	int				maxHitPoints;
-	int				energyPoints;
-	int				maxEnergyPoints;
-	int				level;
-	std::string		name;
-	int				meleeAttackDamage;
-	int				rangedAttackDamage;
-	int				armorDamageReduction;
+
 
 public:
 	FragTrap(void);
@@ -35,10 +28,6 @@ public:
 	~FragTrap(void);
 	FragTrap(const FragTrap &fragTrap);
 	FragTrap		&operator=(const FragTrap &fragTrap);
-	void			rangedAttack(std::string const &target);
-	void			meleeAttack(std::string const &target);
-	void			takeDamage(unsigned int amount);
-	void			beRepaired(unsigned int amount);
 	void			vaulthunter_dot_exe(std::string const &target);
 
 };

@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/06 22:41:01 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 01:04:47 by lmartin          ###   ########.fr       */
+/*   Created: 2020/07/07 00:58:13 by lmartin           #+#    #+#             */
+/*   Updated: 2020/07/07 01:55:12 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
-#include <string>
+# include <string>
 
-class FragTrap
+class ClapTrap
 {
 
-private:
+protected:
 	int				hitPoints;
 	int				maxHitPoints;
 	int				energyPoints;
@@ -30,16 +30,15 @@ private:
 	int				armorDamageReduction;
 
 public:
-	FragTrap(void);
-	FragTrap(std::string name);
-	~FragTrap(void);
-	FragTrap(const FragTrap &fragTrap);
-	FragTrap		&operator=(const FragTrap &fragTrap);
+	ClapTrap(void);
+	ClapTrap(std::string name);
+	~ClapTrap(void);
+	ClapTrap(const ClapTrap &clapTrap);
+	ClapTrap		&operator=(const ClapTrap &clapTrap);
 	void			rangedAttack(std::string const &target);
 	void			meleeAttack(std::string const &target);
 	void			takeDamage(unsigned int amount);
 	void			beRepaired(unsigned int amount);
-	void			vaulthunter_dot_exe(std::string const &target);
 
 };
 

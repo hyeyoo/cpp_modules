@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 22:41:03 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 01:04:42 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 02:04:49 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 #include <cstdlib>
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void)
+FragTrap::FragTrap(void): ClapTrap()
 {
 	this->hitPoints = 100;
 	this->maxHitPoints = 100;
 	this->energyPoints = 100;
 	this->maxEnergyPoints = 100;
 	this->level = 1;
-	this->name = "CL4P-TP";
 	this->meleeAttackDamage = 30;
 	this->rangedAttackDamage = 20;
 	this->armorDamageReduction = 5;
@@ -32,14 +31,13 @@ FragTrap::FragTrap(void)
 	return ;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
 	this->hitPoints = 100;
 	this->maxHitPoints = 100;
 	this->energyPoints = 100;
 	this->maxEnergyPoints = 100;
 	this->level = 1;
-	this->name = name;
 	this->meleeAttackDamage = 30;
 	this->rangedAttackDamage = 20;
 	this->armorDamageReduction = 5;
@@ -75,68 +73,6 @@ FragTrap		&FragTrap::operator=(const FragTrap &fragTrap)
 	this->rangedAttackDamage = fragTrap.rangedAttackDamage;
 	this->armorDamageReduction = fragTrap.armorDamageReduction;
 	return (*this);
-}
-
-void	FragTrap::rangedAttack(std::string const &target)
-{
-	std::cout << "FR4G-TP ";
-	std::cout << this->name;
-	std::cout << " attacks ";
-	std::cout << target;
-	std::cout << " at range, causing ";
-	std::cout << this->rangedAttackDamage;
-	std::cout << " points of damage!";
-	std::cout << std::endl;
-	return ;
-}
-
-void	FragTrap::meleeAttack(std::string const &target)
-{	
-	std::cout << "FR4G-TP ";
-	std::cout << this->name;
-	std::cout << " attacks ";
-	std::cout << target;
-	std::cout << " in melee, causing ";
-	std::cout << this->meleeAttackDamage;
-	std::cout << " points of damage!";
-	std::cout << std::endl;
-	return ;
-}
-
-void	FragTrap::takeDamage(unsigned int amount)
-{	
-	int			dmg_taken;
-
-	dmg_taken = (amount - this->armorDamageReduction);
-	if (dmg_taken < 0)
-		dmg_taken = 0;
-	if (dmg_taken > this->hitPoints)
-		dmg_taken = this->hitPoints;
-	std::cout << "FR4G-TP ";
-	std::cout << this->name;
-	std::cout << " taking ";
-	std::cout << dmg_taken;
-	std::cout << " damage.";
-	std::cout << std::endl;
-	this->hitPoints -= dmg_taken;
-	return ;
-}
-
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	int			hp_repaired;
-
-	hp_repaired = amount;
-	if (this->hitPoints + hp_repaired > this->maxHitPoints)
-		hp_repaired = this->maxHitPoints - this->hitPoints;
-	std::cout << "FR4G-TP ";
-	std::cout << this->name;
-	std::cout << " repaired of ";
-	std::cout << hp_repaired;
-	std::cout << " damage.";
-	std::cout << std::endl;
-	this->hitPoints += hp_repaired;
-	return ;
 }
 	
 void	FragTrap::vaulthunter_dot_exe(std::string const &target)
