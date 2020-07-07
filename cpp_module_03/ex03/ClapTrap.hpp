@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 00:58:13 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 01:55:12 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 21:53:11 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ public:
 	void			meleeAttack(std::string const &target);
 	void			takeDamage(unsigned int amount);
 	void			beRepaired(unsigned int amount);
+	std::string		getName(void);
 
 };
 

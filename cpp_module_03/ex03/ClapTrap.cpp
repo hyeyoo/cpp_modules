@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 01:09:45 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 02:06:47 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 21:52:53 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ ClapTrap		&ClapTrap::operator=(const ClapTrap &clapTrap)
 	return (*this);
 }
 
-void	ClapTrap::rangedAttack(std::string const &target)
+void			ClapTrap::rangedAttack(std::string const &target)
 {
 	std::cout << "CL4P-TP ";
 	std::cout << this->name;
@@ -81,7 +81,7 @@ void	ClapTrap::rangedAttack(std::string const &target)
 	return ;
 }
 
-void	ClapTrap::meleeAttack(std::string const &target)
+void			ClapTrap::meleeAttack(std::string const &target)
 {	
 	std::cout << "CL4P-TP ";
 	std::cout << this->name;
@@ -94,7 +94,7 @@ void	ClapTrap::meleeAttack(std::string const &target)
 	return ;
 }
 
-void	ClapTrap::takeDamage(unsigned int amount)
+void			ClapTrap::takeDamage(unsigned int amount)
 {	
 	int			dmg_taken;
 
@@ -113,7 +113,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	return ;
 }
 
-void	ClapTrap::beRepaired(unsigned int amount)
+void			ClapTrap::beRepaired(unsigned int amount)
 {
 	int			hp_repaired;
 
@@ -130,3 +130,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	return ;
 }
 
+std::string		ClapTrap::getName(void)
+{
+	return (this->name);
+}

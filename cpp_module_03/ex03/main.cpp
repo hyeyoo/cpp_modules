@@ -6,18 +6,20 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 23:53:13 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 02:05:14 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 21:55:32 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
 int		main(void)
 {
 	FragTrap	*frgtrp;
 	ScavTrap	*scvtrp;
+	NinjaTrap	*nnjtrp;
 
 	srand((unsigned) time(0));
 	frgtrp = new FragTrap("Bob");
@@ -32,7 +34,6 @@ int		main(void)
 	frgtrp->vaulthunter_dot_exe("Joe");
 	frgtrp->vaulthunter_dot_exe("Joe");
 	frgtrp->vaulthunter_dot_exe("Joe");
-	delete(frgtrp);
 	scvtrp = new ScavTrap("Raoul");
 	scvtrp->rangedAttack("Fred");	
 	scvtrp->meleeAttack("Fred");	
@@ -43,6 +44,18 @@ int		main(void)
 	scvtrp->challengeNewcomer();
 	scvtrp->challengeNewcomer();
 	scvtrp->challengeNewcomer();
+	nnjtrp = new NinjaTrap("Victor");
+	nnjtrp->rangedAttack("Hugo");	
+	nnjtrp->meleeAttack("Hugo");	
+	nnjtrp->takeDamage(30);
+	nnjtrp->takeDamage(2);
+	nnjtrp->takeDamage(200);
+	nnjtrp->beRepaired(120);
+	nnjtrp->ninjaShoebox(*nnjtrp);
+	nnjtrp->ninjaShoebox(*scvtrp);
+	nnjtrp->ninjaShoebox(*frgtrp);
+	delete(frgtrp);
 	delete(scvtrp);
+	delete(nnjtrp);
 	return (0);
 }

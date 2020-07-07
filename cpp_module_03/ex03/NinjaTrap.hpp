@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 02:14:02 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/07 02:28:49 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/07 21:49:04 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define NINJATRAP_HPP
 
 # include <string>
+# include "ClapTrap.hpp"
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
 
 class NinjaTrap: public ClapTrap
 {
@@ -27,7 +30,10 @@ public:
 	~NinjaTrap(void);
 	NinjaTrap(const NinjaTrap &ninjaTrap);
 	NinjaTrap		&operator=(const NinjaTrap &ninjaTrap);
-	void			ninjaShoebox(void);
+	void			ninjaShoebox(ClapTrap &trap);
+	void			ninjaShoebox(NinjaTrap &trap);
+	void			ninjaShoebox(FragTrap &trap);
+	void			ninjaShoebox(ScavTrap &trap);
 
 };
 
