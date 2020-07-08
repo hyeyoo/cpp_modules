@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 21:56:07 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 23:16:39 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/09 00:11:25 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ Squad				&Squad::operator=(const Squad &squad)
 		ptr = next;
 	}
 	this->marines = NULL;
+	this->size = 0;
 	ptr = squad.marines;
 	while (ptr)
 	{
