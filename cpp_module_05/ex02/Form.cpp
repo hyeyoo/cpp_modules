@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 00:12:07 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/11 04:28:47 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 21:16:57 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,15 @@ int							Form::getGradeToSign(void) const
 int							Form::getGradeToExecute(void) const
 {
 	return (this->gradeToExecute);
+}
+
+void						execute(Bureaucrat const &executor) const
+{
+	if (this->isSigned && executor.grade <= this->gradeToExecute)
+	{
+		
+	}
+	return ;
 }
 
 std::ostream				&operator<<(std::ostream &os, const Form &f)

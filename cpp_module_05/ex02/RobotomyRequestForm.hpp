@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 04:42:05 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/12 23:56:26 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 21:22:17 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	RobotomyRequestForm		&operator=(const RobotomyRequestForm &form);
 
 	RobotomyRequestForm(std::string target);
-	void					action(void);
+	void					execute(Bureaucrat const &executor) const;
 };
 
 #endif

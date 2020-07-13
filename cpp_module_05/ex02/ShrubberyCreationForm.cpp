@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 04:35:24 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/13 02:47:36 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 21:37:10 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ ShruberryCreationForm::ShruberryCreationForm
 	return ;
 }
 
-void					ShurberryCreationForm::action(void)
+void					ShurberryCreationForm::execute
+(Bureaucrat const &executor) const;
 {
 	std::ofstream outfile;	
 

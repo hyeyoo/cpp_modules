@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 04:42:09 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/13 02:30:43 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 21:25:34 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ RobotomyRequestForm::RobotomyRequestForm
 	return ;
 }
 
-void					RobotomyRequestForm::action(void)
+void					RobotomyRequestForm::execute
+(Bureaucrat const &executor) const;
 {
 	std::cout << "VRRRRRRR ";
 

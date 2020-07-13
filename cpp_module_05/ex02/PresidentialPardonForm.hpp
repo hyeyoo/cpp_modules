@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 04:46:58 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/12 23:54:14 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 21:22:23 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	PresidentialPardonForm		&operator=(const PresidentialPardonForm &form);
 
 	PresidentialPardonForm::PresidentialPardonForm(std::string target);
-	void						action(void);
+	void						execute(Bureaucrat const &executor) const;
 
 };
 

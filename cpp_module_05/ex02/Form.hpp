@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 00:12:05 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/11 04:03:56 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 21:37:10 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,9 @@ public:
 	void				beSigned(Bureaucrat &bureaucrat);
 	const std::string	getName(void) const;
 	bool				getIsSigned(void) const;
-	int			getGradeToSign(void) const;
-	int			getGradeToExecute(void) const;
+	int					getGradeToSign(void) const;
+	int					getGradeToExecute(void) const;
+	virtual void		execute(Bureaucrat const &executor) const;
 
 	class GradeTooLowException: public std::exception
 	{

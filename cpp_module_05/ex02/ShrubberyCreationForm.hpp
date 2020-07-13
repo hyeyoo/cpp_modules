@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 04:33:11 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/13 00:01:41 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 21:22:41 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	ShruberryCreationForm		&operator=(const ShruberryCreationForm &form);
 
 	ShruberryCreationForm::ShruberryCreationForm(std::string target);
-	void						action(void);
+	void						execute(Bureaucrat const &executor) const;
 };
 
 #endif
