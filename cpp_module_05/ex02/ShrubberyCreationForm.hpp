@@ -6,27 +6,27 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 04:33:11 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/13 21:22:41 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 23:11:00 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBERRYCREATIONFORM_HPP
-# define SHRUBERRYCREATIONFORM_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+# define SHRUBBERYCREATIONFORM_HPP
 
 # include "Form.hpp"
 
-class ShruberryCreationForm: public Form
+class ShrubberyCreationForm: public Form
 {
 
 private:
-	ShruberryCreationForm(void);
+	ShrubberyCreationForm(void);
 
 public:
-	~ShruberryCreationForm(void);
-	ShruberryCreationForm(const ShruberryCreationForm &form);
-	ShruberryCreationForm		&operator=(const ShruberryCreationForm &form);
+	~ShrubberyCreationForm(void);
+	ShrubberyCreationForm(const ShrubberyCreationForm &form);
+	ShrubberyCreationForm		&operator=(const ShrubberyCreationForm &form);
 
-	ShruberryCreationForm::ShruberryCreationForm(std::string target);
+	ShrubberyCreationForm(std::string target);
 	void						execute(Bureaucrat const &executor) const;
 };
 

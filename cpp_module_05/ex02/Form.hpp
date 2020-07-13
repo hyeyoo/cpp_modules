@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 00:12:05 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/13 21:37:10 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 22:33:42 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,18 @@ public:
 		virtual ~GradeTooHighException(void) throw();
 		GradeTooHighException(const GradeTooHighException &e);
 		GradeTooHighException		&operator=(const GradeTooHighException &e);
+
+		virtual const char *what(void) const throw();
+	};
+
+	class NotSignedException: public std::exception
+	{
+
+	public:
+		NotSignedException(void);
+		virtual ~NotSignedException(void) throw();
+		NotSignedException(const NotSignedException &e);
+		NotSignedException			&operator=(const NotSignedException &e);
 
 		virtual const char *what(void) const throw();
 	};

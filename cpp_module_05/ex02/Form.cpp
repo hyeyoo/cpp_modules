@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 00:12:07 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/13 21:16:57 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 23:20:46 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,12 +98,12 @@ int							Form::getGradeToExecute(void) const
 	return (this->gradeToExecute);
 }
 
-void						execute(Bureaucrat const &executor) const
+void						Form::execute(Bureaucrat const &executor) const
 {
-	if (this->isSigned && executor.grade <= this->gradeToExecute)
-	{
-		
-	}
+	if (!this->isSigned)
+		throw(Form::NotSignedException());
+	else if (executor.getGrade() > this->gradeToExecute)
+		throw(Form::GradeTooLowException());
 	return ;
 }
 
@@ -155,7 +155,7 @@ Form::GradeTooHighException::GradeTooHighException
 }
 
 Form::GradeTooHighException	&Form::GradeTooHighException::operator=
-(const GradeTooHighException &e)
+(const Form::GradeTooHighException &e)
 {
 	(void)e;
 	return (*this);
@@ -165,4 +165,28 @@ const char					*Form::GradeTooHighException::what
 (void) const throw()
 {
 	return ("Grade Too High");
+}
+
+Form::NotSignedException::NotSignedException(void) {}
+
+Form::NotSignedException::~NotSignedException(void) throw() {}
+
+Form::NotSignedException::NotSignedException
+(const Form::NotSignedException &e)
+{
+	*this = e;
+	return ;
+}
+
+Form::NotSignedException	&Form::NotSignedException::operator=
+(const Form::NotSignedException &e)
+{
+	(void)e;
+	return (*this);
+}
+
+const char					*Form::NotSignedException::what
+(void) const throw()
+{
+	return ("Form isn't signed");
 }

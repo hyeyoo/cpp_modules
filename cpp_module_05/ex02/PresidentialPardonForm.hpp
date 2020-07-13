@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 04:46:58 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/13 21:22:23 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 22:51:53 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ class PresidentialPardonForm: public Form
 {
 
 private:
-	PresidentialPardonForm::PresidentialPardonForm(void);
+	PresidentialPardonForm(void);
 
 public:
-	PresidentialPardonForm::~PresidentialPardonForm(void);
-	PresidentialPardonForm::PresidentialPardonForm
+	~PresidentialPardonForm(void);
+	PresidentialPardonForm
 (const PresidentialPardonForm &form);
 	PresidentialPardonForm		&operator=(const PresidentialPardonForm &form);
 
-	PresidentialPardonForm::PresidentialPardonForm(std::string target);
+	PresidentialPardonForm(std::string target);
 	void						execute(Bureaucrat const &executor) const;
 
 };

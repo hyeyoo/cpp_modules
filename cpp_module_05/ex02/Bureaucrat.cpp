@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 01:37:57 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/11 01:14:54 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/13 23:20:11 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,22 @@ const std::string		Bureaucrat::getName(void) const
 int						Bureaucrat::getGrade(void) const
 {
 	return (this->grade);
+}
+
+void					Bureaucrat::executeForm(Form const &form)
+{
+	try
+	{
+		std::cout << this->name << " executes " << form.getName() << ".";
+		std::cout << std::endl;
+		form.execute(*this);
+
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << "Error: " << e.what() << std::endl;	
+	}
+	return ;
 }
 
 std::ostream				&operator<<(std::ostream &os, const Bureaucrat &b)

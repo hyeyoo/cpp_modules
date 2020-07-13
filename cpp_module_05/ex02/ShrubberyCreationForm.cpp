@@ -6,49 +6,53 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 04:35:24 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/13 21:37:10 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/14 00:07:31 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fstream>
-#include "ShruberryCreationForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
-ShruberryCreationForm::ShruberryCreationForm(void)
+ShrubberyCreationForm::ShrubberyCreationForm(void): Form("undefined", 145, 137)
 {
 	return ;
 }
 
-ShruberryCreationForm::~ShruberryCreationForm(void)
+ShrubberyCreationForm::~ShrubberyCreationForm(void)
 {
 	return ;
 }
 
-ShruberryCreationForm::ShruberryCreationForm(const ShruberryCreationForm &form)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &form)
+: Form(form)
 {
+	*this = form;
 	return ;
 }
 
-ShruberryCreationForm	&ShruberryCreationForm::operator=
-(const ShruberryCreationForm &form)
+ShrubberyCreationForm	&ShrubberyCreationForm::operator=
+(const ShrubberyCreationForm &form)
 {
+	(void)form;
 	return (*this);
 }
 
-ShruberryCreationForm::ShruberryCreationForm
+ShrubberyCreationForm::ShrubberyCreationForm
 (std::string target): Form(target, 145, 137)
 {
 	return ;
 }
 
-void					ShurberryCreationForm::execute
-(Bureaucrat const &executor) const;
+void					ShrubberyCreationForm::execute
+(Bureaucrat const &executor) const
 {
 	std::ofstream outfile;	
 
-	outfile.open(this.getName() + "_shrubbery",
+	Form::execute(executor);
+	outfile.open(this->getName() + "_shrubbery",
 std::ofstream::out | std::ofstream::trunc);
 	if (outfile.fail())
-		cerr << "Error: " << strerror(errno) << std::endl;
+		std::cerr << "Error: " << strerror(errno) << std::endl;
 	else
 	{
 		outfile << "    _\\/_" << std::endl;
