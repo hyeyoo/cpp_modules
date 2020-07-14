@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 00:12:07 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/11 04:28:47 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/14 04:41:24 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,9 @@ int							Form::getGradeToExecute(void) const
 std::ostream				&operator<<(std::ostream &os, const Form &f)
 {
 	if (f.getIsSigned())
-		os << f.getName() << "is signed";
+		os << f.getName() << " is signed";
 	else
-		os << f.getName() << "is not signed";
+		os << f.getName() << " is not signed";
 	os << ", sign in required a min grade of " << f.getGradeToSign();
 	os << " and execute a grade of " << f.getGradeToExecute() << ".";
 	os << std::endl;
