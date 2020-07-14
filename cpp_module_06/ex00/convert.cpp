@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 15:31:53 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/14 17:18:59 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/15 01:23:13 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,50 +15,91 @@
 #include <cmath>
 #include "Conversion.hpp"
 
-void		printInt(int d)
+void		printInt(Conversion &conv)
 {
+	int d;
+
+	try
+	{
+		d = (int)conv;	
+		std::cout << d << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	return ;
 }
 
-void		printChar(char c)
+void		printChar(Conversion &conv)
 {
+	char c;
+
+	try
+	{
+		c = (char)conv;
+		std::cout << "'" << c << "'" << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	return ;
 }
 
-void		printFloat(float f)
+void		printFloat(Conversion &conv)
 {
+	float f;
+	
+	try
+	{
+		f = (float)conv;
+		std::cout << f;
+		if (fabs(f - round(f)) < 0.0001)
+			std::cout << ".0";
+		std::cout << "f" << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	return ;
 }
 
-void		printDouble(double d)
+void		printDouble(Conversion &conv)
 {
+	double d;
+
+	try
+	{
+		d = (double)conv;
+		std::cout << d << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	return ;
 }
 
 int			main(int argc, char *argv[])
 {
-	char c;
-	int i;
-	float f;
-	double d;
+	Conversion *conv;
 
 	(void)argc;
-	i = std::stoi(argv[1]);
-	c = i;
-	f = std::stof(argv[1]);
-	d = std::stod(argv[1]);
+	if (argc != 2)
+	{
+		std::cerr << "usage: " << argv[0] << " value" << std::endl;
+		return (0);
+	}
+	conv = new Conversion(argv[1]);
 	std::cout << "char: ";
-	if (c > 31 && c < 127)
-		std::cout << "'" << c << "'" << std::endl;
-	else if (c >= -128 && c <= 127)
-		std::cout << "Non displayable" << std::endl;	
-	else
-		std::cout << "impossible";
-	std::cout << "int: " << i << std::endl;
-	std::cout << "float: " << f;
-	if (fabs(f - round(f)) < 0.0001)
-		std::cout << ".0";
-	std::cout << "f" << std::endl;
-	std::cout << "double: " << d << std::endl;
+	printChar(*conv);
+	std::cout << "int: ";
+	printInt(*conv);
+	std::cout << "float: ";
+	printFloat(*conv);
+	std::cout << "double: ";
+	printDouble(*conv);
 	return (0);
 }

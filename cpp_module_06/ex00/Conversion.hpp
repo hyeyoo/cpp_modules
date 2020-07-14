@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 16:33:05 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/14 16:43:17 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/15 01:22:09 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,26 +38,26 @@ public:
 	{
 	
 	public:
-			ImpossibleException(void)
+			ImpossibleException(void);
 			virtual ~ImpossibleException(void) throw();
 			ImpossibleException(const ImpossibleException &e);
 			ImpossibleException		&operator=(const ImpossibleException &e);
 			
 			virtual const char *what(void) const throw();
-	}	
+	};
 
 	class NonDisplayableException: public std::exception
 	{
 	
 	public:
-			NonDisplayableException(void)
+			NonDisplayableException(void);
 			virtual ~NonDisplayableException(void) throw();
 			NonDisplayableException(const NonDisplayableException &e);
 			NonDisplayableException	&operator=
 (const NonDisplayableException &e);
 			
 			virtual const char *what(void) const throw();
-	}
+	};
 };
 
 #endif

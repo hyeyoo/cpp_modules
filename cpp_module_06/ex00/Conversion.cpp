@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 16:33:10 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/14 17:36:58 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/15 01:24:37 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,14 @@ Conversion::operator char(void) const
 	{
 		c = std::stoi(this->input);
 	}
-	catch
+	catch (std::exception &e)
 	{
 		throw(Conversion::ImpossibleException());
 	}
 	if (c < -128 || c > 127)
 		throw(Conversion::ImpossibleException());
+	else if (c < 32 || c > 126)
+		throw(Conversion::NonDisplayableException());
 	return ((char)c);
 }
 
@@ -66,7 +68,7 @@ Conversion::operator int(void) const
 	{
 		i = std::stoi(this->input);
 	}
-	catch
+	catch (std::exception &e)
 	{
 		throw(Conversion::ImpossibleException());
 	}
@@ -82,7 +84,7 @@ Conversion::operator double(void) const
 	{
 		d = std::stod(this->input);
 	}
-	catch
+	catch (std::exception &e)
 	{
 		throw(Conversion::ImpossibleException());
 	}
@@ -98,7 +100,7 @@ Conversion::operator float(void) const
 	{
 		f = std::stof(this->input);	
 	}
-	catch
+	catch (std::exception &e)
 	{
 		throw(Conversion::ImpossibleException());
 	}
@@ -116,7 +118,7 @@ Conversion::ImpossibleException::ImpossibleException
 	return ;
 }
 
-ImpossibleException			&Conversion::ImpossibleException::operator=
+Conversion::ImpossibleException		&Conversion::ImpossibleException::operator=
 (const ImpossibleException &e)
 {
 	(void)e;
@@ -140,7 +142,8 @@ Conversion::NonDisplayableException::NonDisplayableException
 	return ;
 }
 
-NonDisplayableException		&Conversion::NonDisplayableException::operator=
+Conversion::NonDisplayableException		&
+Conversion::NonDisplayableException::operator=
 (const NonDisplayableException &e)
 {
 	(void)e;
