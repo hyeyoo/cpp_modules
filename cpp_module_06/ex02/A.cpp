@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 05:06:37 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/15 05:14:50 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/15 06:36:28 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ A::A(const A &a)
 	return ;
 }
 
-A		&A::operator(const A &a)
+A		&A::operator=(const A &a)
 {
 	(void)a;
-	return ;
+	return (*this);
 }

@@ -6,7 +6,7 @@
 #    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/30 21:31:46 by lmartin           #+#    #+#              #
-#    Updated: 2020/07/15 05:04:54 by lmartin          ###   ########.fr        #
+#    Updated: 2020/07/15 06:39:41 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #
@@ -72,6 +72,7 @@ SRC			=	identify.cpp \
 				A.cpp \
 				B.cpp \
 				C.cpp
+
 
 SRCS		=	$(SRC)
 
