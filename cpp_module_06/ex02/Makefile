@@ -6,7 +6,7 @@
 #    By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/30 21:31:46 by lmartin           #+#    #+#              #
-#    Updated: 2020/07/15 05:17:49 by lmartin          ###   ########.fr        #
+#    Updated: 2020/07/15 05:04:54 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #
@@ -67,7 +67,11 @@ DIR_OBJS	=	./compiled_srcs/
 
 # FILES #
 
-SRC			=	serialization.cpp
+SRC			=	identify.cpp \
+				Base.cpp \
+				A.cpp \
+				B.cpp \
+				C.cpp
 
 SRCS		=	$(SRC)
 
@@ -75,7 +79,7 @@ SRCS		=	$(SRC)
 
 OBJS 		=	$(SRCS:%.cpp=$(DIR_OBJS)%.o)
 
-NAME 		=	serialization
+NAME 		=	identify
 
 
 # **************************************************************************** #
