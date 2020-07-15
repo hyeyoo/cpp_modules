@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 15:31:53 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/15 01:23:13 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/15 04:20:03 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void		printInt(Conversion &conv)
 
 	try
 	{
-		d = (int)conv;	
+		d = static_cast<int>(conv);	
 		std::cout << d << std::endl;
 	}
 	catch (std::exception &e)
@@ -37,7 +37,7 @@ void		printChar(Conversion &conv)
 
 	try
 	{
-		c = (char)conv;
+		c = static_cast<char>(conv);
 		std::cout << "'" << c << "'" << std::endl;
 	}
 	catch (std::exception &e)
@@ -53,7 +53,7 @@ void		printFloat(Conversion &conv)
 	
 	try
 	{
-		f = (float)conv;
+		f = static_cast<float>(conv);
 		std::cout << f;
 		if (fabs(f - round(f)) < 0.0001)
 			std::cout << ".0";
@@ -72,7 +72,7 @@ void		printDouble(Conversion &conv)
 
 	try
 	{
-		d = (double)conv;
+		d = static_cast<double>(conv);
 		std::cout << d << std::endl;
 	}
 	catch (std::exception &e)

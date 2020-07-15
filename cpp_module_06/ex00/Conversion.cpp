@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 16:33:10 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/15 01:24:37 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/15 04:19:08 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ Conversion::operator char(void) const
 		throw(Conversion::ImpossibleException());
 	else if (c < 32 || c > 126)
 		throw(Conversion::NonDisplayableException());
-	return ((char)c);
+	return (static_cast<char>(c));
 }
 
 Conversion::operator int(void) const
