@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 01:56:55 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/01 11:15:32 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/17 08:23:12 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void		PhoneBook::search(void)
 	}
 	std::cout << "Pick a index" << std::endl;
 	std::cin >> i;
-	if (i < this->index)
+	if (i >= 0 && i < this->index)
 	{
 		std::cout << "index: " << i << std::endl;
 		this->contacts[i].print();
