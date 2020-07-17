@@ -17,7 +17,7 @@ Brain::Brain(void)
 {
 	std::stringstream s;
 	
-	s << this;
+	s << this; // get object from the pointer 'this'
 	this->address = s.str();
 	return ;
 }

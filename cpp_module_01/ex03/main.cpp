@@ -16,6 +16,7 @@ int			main(void)
 {
 	ZombieHorde horde = ZombieHorde(20);
 
+	std::cout << "horde.announce():" << std::endl;
 	horde.announce();
 	return (0);
 }

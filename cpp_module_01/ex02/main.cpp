@@ -26,10 +26,10 @@ int			main(void)
 
 	zombie1 = event.randomChump();
 	zombie1->announce();
-	delete (zombie1);
+	delete (zombie1); // not needed anymore
 	event.setZombieType("not cool");
 	zombie2 = event.newZombie("Hugo");
 	zombie2->announce();
-	delete (zombie2);
+	delete (zombie2); // not needed anymore
 	return (0);
 }

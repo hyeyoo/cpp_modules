@@ -15,6 +15,10 @@
 #include "Zombie.hpp"
 #include "ZombieHorde.hpp"
 
+/*
+** Allocate Zombie in the stack automatically delete them when ZombieHorde is Destroyed
+*/
+
 ZombieHorde::ZombieHorde(int n)
 {
 	this->zombies = new Zombie[n];	

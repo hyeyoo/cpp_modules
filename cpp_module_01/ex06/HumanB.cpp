@@ -27,6 +27,11 @@ void		HumanB::attack(void)
 	return ;
 }
 
+/*
+** HumanB get setWeapon so if it can reassign his weapon
+** we cannot save it as a pointer
+*/
+
 void		HumanB::setWeapon(Weapon &weapon)
 {
 	this->weapon = &weapon;

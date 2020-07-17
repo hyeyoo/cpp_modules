@@ -23,6 +23,5 @@ void			memoryLeak()
 int				main()
 {
 	memoryLeak();
-	while (1);
-	// do 'leaks a.out'
+	//do 'valgrind ./a.out'
 }

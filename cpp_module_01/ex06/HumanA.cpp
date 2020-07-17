@@ -13,6 +13,10 @@
 #include <iostream>
 #include "HumanA.hpp"
 
+/*
+** HumanA never reassigned his weapon so a pointer is better
+*/
+
 HumanA::HumanA(std::string name, Weapon &weapon) : weapon(weapon)
 {
 	this->name = name;
