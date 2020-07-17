@@ -23,7 +23,8 @@ int			main(int argc, char *argv[])
 		while (argv[++i] && (j = -1))
 		{
 			while (argv[i][++j])
-				argv[i][j] -= (argv[i][j] >= 'a' && argv[i][j] <= 'z') ? 32 : 0;
+				argv[i][j] -= (argv[i][j] >= 'a' &&
+argv[i][j] <= 'z') ? 32 : 0;
 			std::cout << argv[i];
 		}
 		std::cout << std::endl;

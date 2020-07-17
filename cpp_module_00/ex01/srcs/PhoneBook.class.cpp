@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <limits>
 #include "PhoneBook.class.hpp"
 
 PhoneBook::PhoneBook(void)
@@ -42,6 +43,7 @@ void		PhoneBook::search(void)
 	}
 	else
 		std::cout << "This index does not match with any contact" << std::endl;
+	std::cin.clear();
 	return ;
 }
 
