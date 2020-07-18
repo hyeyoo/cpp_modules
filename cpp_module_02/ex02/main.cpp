@@ -13,5 +13,19 @@ int		main(void)
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max(a, b) << std::endl;
+
+	Fixed c = Fixed(100.422f);
+	Fixed d = Fixed(0);
+	std::cout << c << " - " << d << " = " << (c - d) << std::endl;
+	std::cout << c << " + " << d << " = " << (c + d) << std::endl;
+	std::cout << c << " * " << d << " = " << (c * d) << std::endl;
+	std::cout << c << " / " << d << " = " << (c / d) << std::endl;
+	std::cout << c << " > " << d << " = " << (c > d) << std::endl;
+	std::cout << c << " < " << d << " = " << (c < d) << std::endl;
+	std::cout << c << " <= " << d << " = " << (c <= d) << std::endl;
+	Fixed e = Fixed(5);
+	std::cout << c << " >= " << e << " = " << (c >= e) << std::endl;
+	std::cout << c << " == " << e << " = " << (c == e) << std::endl;
+	std::cout << c << " != " << e << " = " << (c != e) << std::endl;
 	return (0);
 }

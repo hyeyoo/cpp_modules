@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 04:50:29 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/06 22:37:35 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/18 23:04:25 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Fixed::Fixed(const int nb)
 
 Fixed::Fixed(const float nb)
 {
-	this->fixedPointValue = roundf(nb * (1 << this->fracBits));
+	this->fixedPointValue = (int)roundf(nb * (1 << this->fracBits));
 	return ;
 }
 
@@ -66,6 +66,11 @@ Fixed			Fixed::operator*(const Fixed &fixed) const
 
 Fixed			Fixed::operator/(const Fixed &fixed) const
 {
+	if (fixed.toFloat() == 0)
+	{
+		std::cerr << "Can't divide by 0" << std::endl;
+		return (0);
+	}
 	return (Fixed(this->toFloat() / fixed.toFloat()));
 }
 
@@ -125,9 +130,10 @@ Fixed			Fixed::operator--(int)
 	return (tmp);
 }
 
+
 float			Fixed::toFloat(void) const
 {
-	return (((float)this->fixedPointValue) / (1 << this->fracBits));
+	return (((float)this->fixedPointValue / (1 << this->fracBits)));
 }
 
 int				Fixed::toInt(void) const
