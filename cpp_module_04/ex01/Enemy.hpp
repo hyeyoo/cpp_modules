@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 01:21:41 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 02:56:38 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 01:58:36 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ public:
 	Enemy			&operator=(const Enemy &enemy);
 
 	Enemy(int hp, std::string const &type);
-	std::string		getType(void) const;
-	int				getHP(void) const;
-	virtual void	takeDamage(int);
+	const std::string		&getType(void) const;
+	int						getHP(void) const;
+	virtual void			takeDamage(int);
 
 };
 

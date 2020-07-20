@@ -6,7 +6,11 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 23:37:51 by lmartin           #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2020/07/20 12:10:51 by lmartin          ###   ########.fr       */
+=======
+/*   Updated: 2020/07/20 01:51:54 by lmartin          ###   ########.fr       */
+>>>>>>> 3270c233b0e10d8d512b210ede14465f8916ffa4
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +34,8 @@ public:
 	Victim			&operator=(const Victim &victim);
 
 	Victim(std::string name);
-	void			getPolymorphed(void) const;
-	std::string		getName(void) const;	
+	void					getPolymorphed(void) const;
+	const std::string		&getName(void) const;	
 
 };
 

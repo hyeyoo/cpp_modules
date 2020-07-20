@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 01:21:47 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 01:37:44 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 01:48:28 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Enemy::Enemy(int hp, std::string const &type)
 	return ;
 }
 
-std::string				Enemy::getType(void) const
+const std::string		&Enemy::getType(void) const
 {
 	return (this->type);
 }

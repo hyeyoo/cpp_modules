@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 22:56:22 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 23:15:20 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 02:10:03 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ AssaultTerminator::AssaultTerminator(const AssaultTerminator &terminator)
 
 AssaultTerminator	&AssaultTerminator::operator=(const AssaultTerminator &t)
 {
+	(void)t;
 	return (*this);
 }	
 
