@@ -15,7 +15,7 @@ int		main(void)
 	std::cout << Fixed::max(a, b) << std::endl;
 
 	Fixed c = Fixed(100.422f);
-	Fixed d = Fixed(0);
+	Fixed d = Fixed(10.10f);
 	std::cout << c << " - " << d << " = " << (c - d) << std::endl;
 	std::cout << c << " + " << d << " = " << (c + d) << std::endl;
 	std::cout << c << " * " << d << " = " << (c * d) << std::endl;
