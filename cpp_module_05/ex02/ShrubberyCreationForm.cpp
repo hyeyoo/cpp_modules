@@ -6,10 +6,11 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 04:35:24 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/14 00:07:31 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 18:01:45 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <fstream>
 #include "ShrubberyCreationForm.hpp"
 
