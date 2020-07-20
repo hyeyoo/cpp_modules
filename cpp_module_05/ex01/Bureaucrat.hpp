@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 01:37:53 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/11 01:15:37 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 12:15:16 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ public:
 	void					signForm(Form &form);
 	void					incGrade(void);
 	void					decGrade(void);
-	const std::string		getName(void) const;
+	const std::string		&getName(void) const;
 	int						getGrade(void) const;
 
 	class GradeTooLowException: public std::exception

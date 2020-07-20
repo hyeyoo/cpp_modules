@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 01:37:57 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/09 03:25:02 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 12:13:30 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void					Bureaucrat::decGrade(void)
 		this->grade++;
 }
 
-const std::string		Bureaucrat::getName(void) const
+const std::string		&Bureaucrat::getName(void) const
 {
 	return (this->name);
 }

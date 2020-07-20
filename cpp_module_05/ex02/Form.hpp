@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 00:12:05 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/13 22:33:42 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 12:17:04 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ public:
 	Form
 (const std::string &name, const int gradeToSign, const int gradeToExecute);
 	void				beSigned(Bureaucrat &bureaucrat);
-	const std::string	getName(void) const;
+	const std::string	&getName(void) const;
 	bool				getIsSigned(void) const;
 	int					getGradeToSign(void) const;
 	int					getGradeToExecute(void) const;

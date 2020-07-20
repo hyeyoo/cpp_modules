@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 00:12:07 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/14 04:40:58 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 12:17:23 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void						Form::beSigned(Bureaucrat &bureaucrat)
 	return ;
 }
 
-const std::string			Form::getName(void) const
+const std::string			&Form::getName(void) const
 {
 	return (this->name);
 }
