@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 23:20:07 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 00:33:03 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 11:46:03 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,6 @@ Sorcerer::Sorcerer(std::string name, std::string title)
 }
 
 void			Sorcerer::polymorph(Victim const &victim) const
-{
-	return (victim.getPolymorphed());
-}
-
-void			Sorcerer::polymorph(Peon const &victim) const
 {
 	return (victim.getPolymorphed());
 }

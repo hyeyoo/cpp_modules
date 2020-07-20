@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 23:37:51 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 00:28:02 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 12:10:51 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ protected:
 	Victim(void);
 
 public:
-	~Victim(void);
+	virtual ~Victim(void);
 	Victim(const Victim &victim);
 	Victim			&operator=(const Victim &victim);
 

@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 23:06:42 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 00:33:27 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 11:46:12 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ public:
 
 	Sorcerer(std::string name, std::string title);
 	void			polymorph(Victim const &victim) const;
-	void			polymorph(Peon const &victim) const;
 	std::string		getName(void) const;
 	std::string		getTitle(void) const;
 
