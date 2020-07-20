@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 23:20:07 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 00:33:03 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 01:51:32 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,30 +46,30 @@ Sorcerer::Sorcerer(std::string name, std::string title)
 	return ;
 }
 
-void			Sorcerer::polymorph(Victim const &victim) const
+void				Sorcerer::polymorph(Victim const &victim) const
 {
 	return (victim.getPolymorphed());
 }
 
-void			Sorcerer::polymorph(Peon const &victim) const
+void				Sorcerer::polymorph(Peon const &victim) const
 {
 	return (victim.getPolymorphed());
 }
 
-std::string		Sorcerer::getName(void) const
+const std::string	&Sorcerer::getName(void) const
 {
 	return (this->name);
 }
 
-std::string		Sorcerer::getTitle(void) const
+const std::string	&Sorcerer::getTitle(void) const
 {
 	return (this->title);
 }
 
-std::ostream				&operator<<(std::ostream &os,
+std::ostream		&operator<<(std::ostream &os,
 const Sorcerer &sorcerer)
 {
 	os << "I am " << sorcerer.getName() << ", " << sorcerer.getTitle() << ", ";
-	os << "and i like ponies!" << std::endl;
+	os << "and I like ponies!" << std::endl;
 	return (os);
 }

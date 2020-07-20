@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 00:43:07 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/09 01:22:44 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 02:30:14 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ AMateria				*MateriaSource::createMateria(std::string const &type)
 	int i;
 
 	i = 0;
-	while (i < 4 && this->memory[i]->getType() != type)
+	while (i < 4 && this->memory[i] && this->memory[i]->getType() != type)
 		i++;
-	if (this->memory[i]->getType() == type)
+	if (i < 4 && this->memory[i] && this->memory[i]->getType() == type)
 		return (this->memory[i]->clone());
-	return (0);
+	return (NULL);
 }

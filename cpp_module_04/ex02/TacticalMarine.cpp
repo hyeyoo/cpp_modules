@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 22:44:05 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 23:17:01 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 02:04:22 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ TacticalMarine::TacticalMarine(const TacticalMarine &marine)
 
 TacticalMarine			&TacticalMarine::operator=(const TacticalMarine &marine)
 {
+	(void)marine;
 	return (*this);
 }
 

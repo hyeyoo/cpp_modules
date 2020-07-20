@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 23:52:59 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 00:30:56 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 01:52:04 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void				Victim::getPolymorphed(void) const
 	return ;
 }
 
-std::string			Victim::getName(void) const
+const std::string	&Victim::getName(void) const
 {
 	return (this->name);
 }

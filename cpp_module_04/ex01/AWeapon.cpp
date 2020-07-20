@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 00:41:23 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 00:56:00 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 01:49:50 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ AWeapon::AWeapon(std::string const &name, int apcost, int damage)
 	return ;
 }
 
-std::string			AWeapon::getName(void) const
+const std::string	&AWeapon::getName(void) const
 {
 	return (this->name);
 }

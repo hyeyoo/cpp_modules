@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 02:15:08 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 02:47:29 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 01:59:09 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ public:
 	void					recoverAP(void);
 	void					equip(AWeapon *);
 	void					attack(Enemy *);
-	std::string				getName(void) const;	
+	const std::string		&getName(void) const;	
 	int						getAP(void) const;
 	AWeapon					*getWeapon(void) const;
 

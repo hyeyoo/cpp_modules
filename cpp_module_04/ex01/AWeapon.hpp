@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 00:41:20 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 03:21:09 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 01:53:36 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ protected:
 	AWeapon(void);
 
 public:
-	~AWeapon(void);
+	virtual ~AWeapon(void);
 	AWeapon(const AWeapon &aweapon);
 	AWeapon				&operator=(const AWeapon &aweapon);
 
 	AWeapon(std::string const &name, int apcost, int damage);
-	std::string 		getName(void) const;
+	const std::string 	&getName(void) const;
 	int					getAPCost(void) const;
 	int					getDamage(void) const;
 	virtual void		attack(void) const = 0;

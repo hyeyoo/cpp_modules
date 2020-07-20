@@ -6,7 +6,7 @@
 /*   By: lmartin <lmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 02:15:11 by lmartin           #+#    #+#             */
-/*   Updated: 2020/07/08 02:54:27 by lmartin          ###   ########.fr       */
+/*   Updated: 2020/07/20 01:59:26 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void						Character::attack(Enemy *enemy)
 	return ;
 }
 
-std::string					Character::getName(void) const
+const std::string			&Character::getName(void) const
 {
 	return (this->name);
 }
