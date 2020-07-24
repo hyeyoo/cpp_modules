@@ -22,6 +22,8 @@ public:
 
 	~Array(void)
 	{
+		if (this->length)
+			delete[] this->array;
 		return ;
 	}
 
