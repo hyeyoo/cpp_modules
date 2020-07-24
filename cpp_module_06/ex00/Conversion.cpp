@@ -36,9 +36,13 @@ Conversion		&Conversion::operator=(const Conversion &conversion)
 
 Conversion::Conversion(std::string input)
 {
-	this->input = input;
+	if (input.size() == 1 && input.at(0) <= 127 && input.at(0) >= -128)
+		this->input = std::to_string(input.at(0));
+	else
+		this->input = input;
 	return ;
 }
+
 
 Conversion::operator char(void) const
 {
