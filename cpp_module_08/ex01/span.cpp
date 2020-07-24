@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <algorithm>
+#include <string>
 #include "span.hpp"
 
 Span::Span(void)
