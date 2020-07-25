@@ -38,18 +38,28 @@ int			main(void)
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
 
-	std::cout << "-- 500 random values and max size" << std::endl;
+	std::vector<int> vector(10000);
+	std::vector<int>::iterator head = vector.begin();
+	std::vector<int>::iterator tail = vector.end();
+	std::vector<int>::iterator it = head;
 	srand(time(NULL));
-	Span goo = Span(500);
+	while (it != tail)
+	{
+		*it = rand();
+		it++;
+	}
+	std::cout << "-- 10000 random values and max size" << std::endl;
+	Span goo = Span(10000);
+	goo.addNumbers(head, tail);
+	std::cout << "ShortestSpan(): " << goo.shortestSpan() << std::endl;
+	std::cout << "LongestSpan(): " << goo.longestSpan() << std::endl;
+	std::cout << "-- MaxSize2 Test" << std::endl;
 	try
 	{
-		for (int i = 0; i < 1000; i++)
-			goo.addNumber(rand());
+		goo.addNumbers(head, tail);
 	}
 	catch (std::exception &e)
 	{
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
-	std::cout << "ShortestSpan(): " << goo.shortestSpan() << std::endl;
-	std::cout << "LongestSpan(): " << goo.longestSpan() << std::endl;
 }

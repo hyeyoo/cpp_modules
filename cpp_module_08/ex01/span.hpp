@@ -33,6 +33,21 @@ public:
 
 	Span(unsigned int size);
 	void			addNumber(int nb);
+	template<typename T>
+	void			addNumbers(T head, T tail)
+	{	
+		if (std::distance(head, tail) > (size - this->array.size()))
+			throw(std::length_error("Array is at max size"));	
+		else
+		{
+			while (head != tail)
+			{
+				this->array.push_back(*head);
+				head++;
+			}
+		}
+		return ;
+	}
 	unsigned int	shortestSpan(void);
 	unsigned int	longestSpan(void);
 };
