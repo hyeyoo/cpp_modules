@@ -36,7 +36,7 @@ public:
 	template<typename T>
 	void			addNumbers(T head, T tail)
 	{	
-		if (std::distance(head, tail) > (size - this->array.size()))
+		if (static_cast<unsigned long>(std::distance(head, tail)) > (size - this->array.size()))
 			throw(std::length_error("Array is at max size"));	
 		else
 		{
